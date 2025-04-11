@@ -118,7 +118,7 @@ const PolaroidCreator = () => {
   };
 
   return (
-    <div className=" text-white px-6 py-10 md:p-12 font-sans">
+    <div className=" text-white poppins px-6 py-10 md:p-12 font-sans">
       <h1 className="text-4xl md:text-5xl logo font-bold text-center mb-10">
         Craft Your Polaroid
       </h1>

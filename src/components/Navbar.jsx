@@ -29,9 +29,7 @@ const Navbar = () => {
           <Link to="/createpolaroid" className="text-sm hover:text-pink-400 font-light transition duration-200">
             Create Polaroid
           </Link>
-          <Link to="/contact" className="text-sm hover:text-pink-400 font-light transition duration-200">
-            Contact
-          </Link>
+      
         </div>
 
      
@@ -73,7 +71,7 @@ const Navbar = () => {
                 {[
                   { label: "Home", to: "/" },
                   { label: "Create Polaroid", to:"/createpolaroid" },
-                  { label: "Contact", to: "/contact" },
+               
                 ].map((item, idx) => (
                   <Link
                     key={idx}
