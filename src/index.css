@@ -42,14 +42,25 @@
     overflow: hidden;
   }
 
-  body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-    background-image: url("data:image/svg+xml,%3Csvg width='300' height='300' viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='3.5' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-    opacity: 0.15; /* Brighter noise */
-    background-size: cover;
-  }
 }
+
+
+
+
+.polaroid-glossy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 10%, rgba(255, 255, 255, 0) 40%);
+  pointer-events: none;
+  opacity: 0.6;
+  border-radius: 8px;
+  z-index: 2;
+}
+
+
+
+
+

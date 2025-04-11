@@ -1,5 +1,6 @@
 import React from "react";
 import { SlCamera } from "react-icons/sl";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const polaroids = [
@@ -25,13 +26,13 @@ const Home = () => {
       img: "https://i.pinimg.com/474x/02/c4/47/02c44731597ad485bd307683dfe8a232.jpg",
       rotation: "rotate-[-12deg]",
       translate: "-translate-y-[30px] md:-translate-y-[50px]",
-      caption: "New York",
+      caption: "London",
       wide: true,
     },
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-8 md:px-16 lg:px-24 py-12 overflow-hidden text-white ">
+    <section className="relative h-screen flex items-center justify-center px-4 sm:px-8 md:px-16 lg:px-24 py-12 overflow-hidden text-white ">
 
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="w-full h-full opacity-10 bg-[url('data:image/svg+xml,%3Csvg width=\'300\' height=\'300\' viewBox=\'0 0 300 300\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'2.5\' numOctaves=\'1\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\'/%3E%3C/svg%3E')] bg-cover mix-blend-screen" />
@@ -42,21 +43,21 @@ const Home = () => {
       {/* Main Content */}
       <div className="z-10 flex flex-col lg:flex-row items-center gap-10 lg:gap-16 w-full max-w-7xl">
         {/* Text Section */}
-        <div className="flex-1 text-center md:pb-[100px] md:pt-0 pt-[40px] lg:text-left animate-fade-in-up">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight logo drop-shadow-[0_2px_10px_rgba(255,192,203,0.4)]">
+        <div className="flex-1 text-center  md:pb-[100px] md:pt-0  lg:text-left animate-fade-in-up">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold leading-tight logo drop-shadow-[0_2px_10px_rgba(255,192,203,0.4)]">
             Capture Moments,<br />
             <span className="text-pink-300 glow">Create Memories</span>
           </h1>
-          <p className="mt-4 text-gray-300 text-sm sm:text-base max-w-md mx-auto lg:mx-0 poppins">
+          <p className="mt-6 text-gray-300 text-[10px] md:text-[12px]  w-[218px] md:w-[420px] md:max-w-md mx-auto lg:mx-0 poppins">
             Turn your favorite photos into timeless Polaroid-style prints that bring your stories to life.
           </p>
-          <button className="mt-6 px-6 py-3 bg-white text-black font-semibold rounded-md shadow-md hover:scale-105 transition-all flex items-center gap-2 mx-auto lg:mx-0 hover:bg-pink-100 hover:shadow-pink-300/40 duration-300">
-            <SlCamera className="text-lg" /> Create Your Polaroid
-          </button>
+        <Link to="/createpolaroid" ><button  className="mt-6 md:px-6 px-3  text-[12px] py-2 md:py-3 bg-white text-black font-semibold rounded-md shadow-md hover:scale-105 transition-all flex items-center gap-2 mx-auto lg:mx-0 hover:bg-pink-100 hover:shadow-pink-300/40 duration-300">
+            <SlCamera className= " md:text-lg" /> Create Your Polaroid
+          </button></Link> 
         </div>
 
         {/* Polaroid Section */}
-        <div className="flex-1 relative grid grid-cols-2 mt-[25px] md:grid-cols-2 gap-y-6 place-items-center animate-fade-in">
+        <div className="flex-1 relative grid grid-cols-2  md:grid-cols-2 gap-y-6 place-items-center animate-fade-in">
           {polaroids.map((item, i) => (
             <div
               key={i}
@@ -78,6 +79,7 @@ const Home = () => {
           ))}
         </div>
       </div>
+      
     </section>
   );
 };
