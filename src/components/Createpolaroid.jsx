@@ -129,7 +129,7 @@ const PolaroidCreator = () => {
                       <img src={img.preview} alt={`polaroid-${idx}`} className="w-full h-full object-contain" />
                     </div>
                   </div>
-                  <p className="caption text-sm text-black font-handwritten text-center mb-[30px] px-2 truncate">
+                  <p className="caption text-sm text-black font-handwritten text-center my-[30px]  px-2 truncate">
                     {img.caption || ""}
                   </p>
                 </div>
